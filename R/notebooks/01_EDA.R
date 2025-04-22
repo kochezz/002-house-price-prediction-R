@@ -6,7 +6,7 @@
 
 # Author: William C. Phiri
 # Date: 21 Apr 2025
-# Pillar 1e: - Module 3
+# Pillar 1e: - Module 3 - EDA
 
 #------------------------------------------
 
@@ -72,6 +72,8 @@ dim(hse_price)
 
 any(is.na(hse_price))
 
+names(hse_price)
+
 #-------------------------------------------------------
 
 # Data Cleaning
@@ -83,52 +85,25 @@ hse_price <- hse_price %>%
 
 # Drop HouseID column
 
-hse_price <- subset(hse_price, select = -houseid)
+if ("houseid" %in% names(hse_price)) {
+  hse_price <- hse_price %>% dplyr::select(-houseid)
+}
 
 head(hse_price)
 str(hse_price)
 dim(hse_price)
 
 
-#--------------------------------------------------------
-
-# Splitting Data into Training (80%) and Testing (20%) Sets
-
-# 2. Set seed for reproducibility
-set.seed(123)
-
-# 3. Create training partition (80%)
-split_index <- createDataPartition(hse_price$price, p = 0.8, list = FALSE)
-
-# 4. Split the data
-train_data <- hse_price[split_index, ]
-test_data  <- hse_price[-split_index, ]
-
-dim(train_data)
-dim(test_data)
-
-#--------------------------------------------------------
-
-# Save updated files
-
-# Set folder for saving processed files.
-
-setwd("C:/Users/willi/GitHub/FPM_Assingment_R/FPM_R_Assignment/data/processed")
+#------------------------------------------------------
 
 # Save hse_price cleaned data set
 
-write.csv(hse_price,"hse_price_cleaned.csv")
+setwd("C:/Users/willi/GitHub/FPM_Assingment_R/FPM_R_Assignment/data/processed")
+
+readr::write_csv(hse_price,"hse_price_cleaned.csv")
 
 
-# Save train/test datasets
-
-write_csv(train_data, "train_data.csv")
-write_csv(test_data, "test_data.csv")
-
-#---------------------------------------------------------
-
-
-
+#-------------------------------------------------------
 
 
 

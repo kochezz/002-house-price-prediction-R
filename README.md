@@ -1,0 +1,83 @@
+
+# 🏡 House Price Prediction using Multiple Linear Regression (R)
+
+[![R](https://img.shields.io/badge/Built%20With-R-blue?logo=r)](https://www.r-project.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/Status-Complete-brightgreen.svg)]()
+[![Data](https://img.shields.io/badge/Data-Cleaned-lightgrey)]()
+
+---
+
+## 📘 Project Overview
+
+This project builds a **Multiple Linear Regression** model in **R** to predict the **selling price** of houses based on:
+
+- Carpet area (in square feet)
+- Distance from the nearest metro station (in km)
+- Number of schools within 2 km
+
+The dataset contains **198 observations** and 5 variables.
+
+---
+
+## 📂 Repository Structure
+
+```
+├── data/
+│   ├── raw/                       # Original dataset
+│   ├── processed/                 # Cleaned and split datasets
+├── models/                        # Saved R model (RDS format)
+├── R/
+│   ├── scripts/                   # R scripts by step
+│   └── reports/                   # Report outputs
+├── dashboards/                    # (future) Shiny app files
+└── house_price_model_report.pdf  # Final analysis report (PDF)
+```
+
+---
+
+## 📊 Model Summary
+
+- **Model Type:** Multiple Linear Regression
+- **R²:** 0.794
+- **Adjusted R²:** 0.791
+- **Train RMSE:** 1.699
+- **Test RMSE:** 2.242
+
+**Significant Predictors:**  
+✅ `carpet_area`  
+✅ `distance_from_metro`  
+✅ `number_of_schools`
+
+---
+
+## 🔍 Diagnostics Summary
+
+| Check                   | Result                         |
+|------------------------|--------------------------------|
+| Multicollinearity      | No (VIF < 5 for all vars)      |
+| Influential Points     | 19 removed (Cook’s Distance)   |
+| Normality of Residuals | Slight deviation (p = 0.011)   |
+| Homoscedasticity       | ✅ Verified via residual plots  |
+
+---
+
+## 🚀 Next Steps
+
+- Develop a **Shiny dashboard** for real-time predictions
+- Deploy the model via **RStudio Connect** or **ShinyApps.io**
+- Add interactive CSV upload for bulk predictions
+
+---
+
+## 📬 Contact
+
+Developed by **Business Enterprise Data Architecture (BEDA)**  
+📩 Email: [wphiri@beda.ie](mailto:wphiri@beda.ie)  
+🧭 Motto: _"Get it done the BEDA way"_
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
