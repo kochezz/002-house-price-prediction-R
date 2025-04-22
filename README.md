@@ -74,6 +74,7 @@ The dataset contains **198 observations** and 5 variables.
 
 Developed by **Business Enterprise Data Architecture (BEDA)**  
 📩 Email: [wphiri@beda.ie](mailto:wphiri@beda.ie)  
+🔗 LinkedIn: [William Phiri](https://www.linkedin.com/in/william-phiri-866b8443/)  
 🧭 Motto: _"Get it done the BEDA way"_
 
 ---
