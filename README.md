@@ -36,11 +36,11 @@ The dataset contains **198 observations** and 5 variables.
 
 ---
 
-## 📊 Model Summary
+## 📊 Final Model Summary
 
 - **Model Type:** Multiple Linear Regression
-- **R²:** 0.794
-- **Adjusted R²:** 0.791
+- **R²:** 0.847
+- **Adjusted R²:** 0.843
 - **Train RMSE:** 1.699
 - **Test RMSE:** 2.242
 
@@ -56,7 +56,7 @@ The dataset contains **198 observations** and 5 variables.
 | Check                   | Result                         |
 |------------------------|--------------------------------|
 | Multicollinearity      | No (VIF < 5 for all vars)      |
-| Influential Points     | 19 removed (Cook’s Distance)   |
+| Influential Points     | 17 removed (Cook’s Distance)   |
 | Normality of Residuals | Slight deviation (p = 0.011)   |
 | Homoscedasticity       | ✅ Verified via residual plots  |
 
@@ -75,7 +75,7 @@ The dataset contains **198 observations** and 5 variables.
 Developed by **Business Enterprise Data Architecture (BEDA)**  
 📩 Email: [wphiri@beda.ie](mailto:wphiri@beda.ie)  
 🔗 LinkedIn: [William Phiri](https://www.linkedin.com/in/william-phiri-866b8443/)  
-🧭 Motto: _"Get it done the BEDA way"_
+🧭  _"Get it done the BEDA way"_
 
 ---
 
