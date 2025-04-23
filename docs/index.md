@@ -1,7 +1,6 @@
 
 ---
-layout: default
-title: House Price Prediction (R)
+House Price Prediction (R)
 ---
 
 <p align="center">
@@ -40,15 +39,11 @@ This project builds a **Multiple Linear Regression** model in **R** to predict t
 ```
 002-house-price-prediction-R/
 ├── data/
-│   ├── raw/
-│   └── processed/
+├── docs/
+├── environment/
 ├── models/
 ├── R/
-│   └── scripts/
-├── reports/
-├── dashboards/
-├── environment/
-└── README.md
+└── reports/
 ```
 
 ---
@@ -75,12 +70,25 @@ This project builds a **Multiple Linear Regression** model in **R** to predict t
 
 ---
 
-## 🧪 Notes
+### 📉 Model Diagnostics Plots
 
-The R version of the model had slightly different characteristics from Python due to:
-- Different influential point removal count
-- `set.seed()` and `createDataPartition()` variation in splitting
-- `schools` remained statistically significant in R
+<p align="center">
+  <img src="./residual_plot.png" alt="Residual Plot" width="50%"/>
+  <br/>
+  <em>Residuals vs Fitted</em>
+</p>
+
+<p align="center">
+  <img src="./cooks_distance.png" alt="Cook's Distance" width="50%"/>
+  <br/>
+  <em>Cook's Distance</em>
+</p>
+
+<p align="center">
+  <img src="./qq_plot.png" alt="Normal Q-Q Plot" width="50%"/>
+  <br/>
+  <em>Normal Q-Q Plot</em>
+</p>
 
 ---
 
@@ -91,19 +99,3 @@ Business Enterprise Data Architecture (BEDA)
 🔗 [LinkedIn – William Phiri](https://www.linkedin.com/in/william-phiri-866b8443/)
 
 ---
-
-
----
-
-### 📉 Model Diagnostics Plots
-
-**Residuals vs Fitted**
-![Residual Plot](./residual_plot.png)
-
-**Cook’s Distance Plot**
-![Cook's Distance](./cooks_distance.png)
-
-**Normal Q-Q Plot**
-![Normal Q-Q](./qq_plot.png)
-
-Upload these plot images into your `docs/` folder to make them appear here on your live GitHub Pages site.
