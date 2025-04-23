@@ -61,7 +61,7 @@ model_stats <- glance(model1) %>%
 
 
 cat("\n📈 R-squared:", round(model_stats$r.squared, 3))
-cat("\n📈 Adjusted R-squared:", round(model_stats$adj.r.squared, 3), "\n") 
+cat("\n📈 Adjusted R-squared:", round(model_stats$adj.r.squared, 4), "\n") 
   
   
 #------------------------------------------------------
@@ -116,14 +116,22 @@ if (length(influential_pts) > 0) {
 
 # Plot Cooks Distance
 
-plot(cooks_d, type = "h", main = "Cooks Distance", col = "blue", ylab = "Cook's Distance")
+plot(cooks_d, type = "h", main = "Cook's Distance for Each Observation", 
+     col = "blue", ylab = "Cook's Distance")
 abline(h = threshold, col = "red", lty = 2)
-  
+
+# Identify influential points (those above the threshold)
+influential <- which(cooks_d > threshold)
+
+# Add labels with actual Cook's distance values (rounded for readability)
+text(x = influential, y = cooks_d[influential], 
+     labels = influential,  # Just the index
+     pos = 3, col = "red", cex = 0.8, offset = 0.5)
 
 #--------------------------------------------------------
 
 
-# Removal of Infleuential points to improve residual behaviour and model performance.
+# Removal of Influential points to improve residual behavior and model performance.
 
 # We clean up the training data by removing the influential points.
 
@@ -194,7 +202,7 @@ residuals_lm <- residuals(model2)
 
 # Q-Q Plot
 
-qqnorm(residuals_lm, main = "Q-Q Plot of Residuals", pch = 19, col = "blue")
+qqnorm(residuals_lm, main = "Q-Q Plot of Residuals", pch = 19, col = "darkgreen")
 qqline(residuals_lm, col = "red", lwd = 2)
 
 

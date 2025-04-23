@@ -1,0 +1,6 @@
+
+theme: minima
+title: BEDA Portfolio – R Project
+description: A predictive modeling project in R to estimate house prices
+minima:
+  skin: dark
