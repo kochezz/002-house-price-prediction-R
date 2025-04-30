@@ -15,7 +15,30 @@ This project builds a **Multiple Linear Regression** model in **R** to predict t
 - Carpet area (in square feet)
 - Distance from the nearest metro station (in km)
 - Number of schools within 2 km
+  
+## 📋 Objectives / Questions Addressed
 
+1. **Data Import & Structure Check**
+2. **Train-Test Split (80/20)**
+3. **Model Building using Multiple Linear Regression**
+4. **Variable Significance & Interpretation**
+5. **R² and Adjusted R² Evaluation**
+6. **Multicollinearity Check (VIF)**
+7. **Influential Observations**
+8. **Normality of Errors**
+9. **Heteroscedasticity Check**
+10. **RMSE Calculation for Training & Testing Sets**
+
+---  
+
+The dataset contains **198 observations** and 5 variables.
+
+The Project aims to;
+- Predict house prices in millions of Rs
+- Build an interactive dashboard using `Shiny`
+- Model trained using `Stats Package` lm()
+- Built with reproducibility and scalability in mind
+  
 The dataset contains **198 observations** and 5 variables.
 
 ---
